@@ -3,7 +3,8 @@ import "./App.css";
 // import Comp from "./components/Comp";
 // import Skay from "./components/Skay";
 // import Event from "./components/Event";
-import Conditionals from "./components/Conditionals";
+// import Conditionals from "./components/Conditionals";
+import List from "./components/List";
 
 function App() {
   let name = "Skay";
@@ -11,7 +12,8 @@ function App() {
 
   return (
     <>
-      <Conditionals />
+      <List />
+      {/* <Conditionals /> */}
       {/* <Event /> */}
       {/* <Comp />
       <Skay name={name} age={age} /> */}
