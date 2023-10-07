@@ -8,7 +8,7 @@ const Conditionals = () => {
     setAuth(!auth);
   };
   return (
-    <div>
+    <div className="container">
       <button onClick={handleAuth}>{auth ? "logout" : "login"}</button>
       <h1>{auth ? "Authenticated user" : "Not authenticated"}</h1>
       {/* <h1>{auth && user}</h1> */}

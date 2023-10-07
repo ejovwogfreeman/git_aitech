@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
+import "../css/Form.css";
 
 const Form = () => {
   //   let count = 0;
@@ -17,15 +19,15 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [password, setPassord] = useState("");
 
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => {
+    setShow(!show);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ name, email, password });
-  };
-
-  const formStyle = {
-    border: "1px solid rgba(255,255,255,0.3)",
-    padding: "20px",
-    borderRadius: "10px",
   };
 
   return (
@@ -36,7 +38,7 @@ const Form = () => {
       <button onClick={handleDec}>decrease</button>
       <button onClick={handleRes}>reset</button>
       <button onClick={handleInc}>increase</button> */}
-      <form action="" style={formStyle} onSubmit={handleSubmit}>
+      <form action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="">Name</label> <br />
           <input
@@ -53,13 +55,16 @@ const Form = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div>
+        <div className="eye-cont">
           <label htmlFor="">Password</label> <br />
           <input
-            type="password"
+            type={show ? "text" : "password"}
             value={password}
             onChange={(e) => setPassord(e.target.value)}
           />
+          <span onClick={handleShow} className="eye">
+            {show ? <BsEyeSlash /> : <BsEye />}
+          </span>
         </div>
         <br />
         <button>SUBMIT</button>

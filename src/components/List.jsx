@@ -16,7 +16,7 @@ const List = () => {
     },
   ];
   return (
-    <div>
+    <div className="container">
       {people.map((x) => {
         return (
           <div>

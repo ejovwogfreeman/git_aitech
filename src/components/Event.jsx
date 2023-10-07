@@ -5,7 +5,7 @@ const Event = () => {
   //     alert(name + " hello world");
   //   };
   return (
-    <div>
+    <div className="container">
       <button onClick={() => handleClick("godbless")}>click me</button>
     </div>
   );

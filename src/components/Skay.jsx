@@ -4,7 +4,7 @@ import React from "react";
 const Skay = ({ name, age }) => {
   let names = ["gb", "fm", "lc"];
   return (
-    <div>
+    <div className="container">
       Hello, my name is {name} and i am {age}years old
       {names.map((x) => {
         return <div>{x}</div>;
